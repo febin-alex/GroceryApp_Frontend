@@ -18,5 +18,8 @@ export class DataService {
   getProductsByCatId(catId:any,subcatId:any):Observable<IProduct>{
     return this.http.get<IProduct>('http://localhost:5254/api/Product/'+catId+'/'+subcatId);
   }
+  getProductsById(Id:any):Observable<any>{
+    return this.http.get<any>('http://localhost:5254/api/Product/'+Id);
+  }
 
 }

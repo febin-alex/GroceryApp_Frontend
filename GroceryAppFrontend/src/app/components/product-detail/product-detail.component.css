@@ -1,0 +1,27 @@
+.container{
+    width: auto;
+    height: 420px;
+    background-color: rgb(167, 226, 167);
+    border-radius: 20px;
+}
+.wrapper{
+    height: 400px;
+    padding-top: 10px;
+}
+img{
+    height: 400px;
+    border-radius: 20px;
+ 
+}
+.mrp{
+    opacity: 0.5;
+}
+.saving{
+    opacity: 0.75;
+}
+.btn{
+    background-color: brown;
+    color: white;
+    padding: 10px 150px 10px 10px;
+    
+}
