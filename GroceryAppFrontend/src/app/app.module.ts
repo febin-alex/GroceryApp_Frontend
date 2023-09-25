@@ -26,6 +26,8 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContentComponent } from './components/content/content.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
     ContactPageComponent,
     AboutPageComponent,
     ErrorPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    FooterComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
