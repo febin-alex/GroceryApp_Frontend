@@ -1,1 +1,12 @@
-<p>subcategory works!</p>
+
+
+<!-- <h2 class="text text-center">Sub Categories</h2>  -->
+<br><br>
+<ul class="list-group" > 
+    
+        <li><a class="list-group-item" *ngFor="let subcategory of subcategories" href="/category/{{catId}}/{{subcategory.id}}">
+        {{subcategory.subcategoryName}}
+        </a> 
+    </li>
+
+</ul>

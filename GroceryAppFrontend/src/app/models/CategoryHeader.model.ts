@@ -3,5 +3,6 @@ export interface CategoryHeader{
     CategoryDesc:string;
     CategoryUrl:string;
     CategoryOffer:number;
+    CategoryRouterLink:string;
 
 }

@@ -97,15 +97,16 @@
         <div class="col-md-3">
           <h4 class="text-light">Popular Categories</h4>
           <ul class="list-group"  style="list-style-type: none;">
-            <li class=""><a href="">Fruits and Vegetables</a></li>
+            <a  *ngFor="let cat of categories" href="/category/{{cat.id}}" >{{cat.categoryName}}</a>
+            <!-- <li class=""><a href="">Fruits and Vegetables</a></li>
             <li class=""><a href="">Foodgrains, Oil and Masala</a></li>
             <li class=""><a href="">Bakery, Cakes and Dairy</a></li>
             <li class=""><a href="">Eggs, Meat and Fish</a></li>
-            <li class=""><a href="">Beverages</a></li>
+            <li class=""><a href="">Beverages</a></li> -->
           </ul>
         </div>
       </div>
       <hr>
-      <h5><a href="">Back To Top</a></h5>
+      <h5><a href="">Back To Home</a></h5>
     </div>
   </div>
