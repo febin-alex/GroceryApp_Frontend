@@ -1,14 +1,16 @@
 .container{
     width: auto;
-    height: 420px;
+    height: auto;
     background-color: rgb(167, 226, 167);
     border-radius: 20px;
+ 
 }
 .wrapper{
-    height: 400px;
-    padding-top: 10px;
+    height: 440px;
+   
+    padding: 20px;
 }
-img{
+#ProductImg{
     height: 400px;
     border-radius: 20px;
  
@@ -22,6 +24,7 @@ img{
 .btn{
     background-color: brown;
     color: white;
-    padding: 10px 150px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
     
 }
