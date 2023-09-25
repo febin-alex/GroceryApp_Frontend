@@ -1,1 +1,58 @@
-<p>category works!</p>
+<div class="container">
+  <h3>Shop by your favourite Category!</h3>
+    <div id="myCarousel" class=" carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner text-center">
+            <div class="carousel-item active row">
+                <div class="card col-lg-4 float-left border-0 image1">
+                  <a href="">
+                    <img src={{categories[0].categoryUrl}} alt={{categories[0].categoryName}} class="card-image-top w-33 img-responsive">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">{{categories[0].categoryName}} &gt;&gt;</h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="card col-lg-4 float-left border-0 image2" style="padding-left: 16px;">
+                  <a href="">
+                    <img src={{categories[1].categoryUrl}} alt={{categories[1].categoryName}} class="card-image-top w-34 img-responsive">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">{{categories[1].categoryName}} &gt;&gt;</h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="card col-lg-4 float-left border-0 image3">
+                  <a href="">
+                    <img src={{categories[2].categoryUrl}} alt={{categories[2].categoryName}} class="card-image-top w-33 img-responsive">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">{{categories[2].categoryName}} &gt;&gt;</h5>
+                    </div>
+                  </a>
+                </div>
+            </div>
+            <div class="carousel-item row">
+              <div class="card col-lg-4 float-left border-0 image4">
+                <a href="">
+                  <img src={{categories[3].categoryUrl}} alt={{categories[3].categoryName}} class="card-image-top w-33 img-responsive">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{categories[3].categoryName}} &gt;&gt;</h5>
+                  </div>
+                </a>
+              </div>
+              <div class="card col-lg-4 float-left border-0 image5">
+                <a href="">
+                  <img src={{categories[4].categoryUrl}} alt={{categories[4].categoryName}} class="card-image-top w-34 img-responsive">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{categories[4].categoryName}} &gt;&gt;</h5>
+                  </div>
+                </a>
+              </div>
+        </div>
+        <button type="button" class="left carousel-control carousel-control-prev" data-target="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button type="button" class="right carousel-control carousel-control-next" data-target="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span>
+        </button>
+    </div>
+</div>

@@ -1,1 +1,24 @@
-<p>product works!</p>
+<div class="container">
+    <br><br>
+    <div class="row">
+            <div class="col-md-3" *ngFor="let product of products">
+                <a href="">
+                    <div class="card">
+                        <img src={{product.productUrl}} alt={{product.productName}} class="card-image-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.productName}}</h5>
+                            <br>
+                            <p class="card-text">1 {{product.unitType}}</p>
+                            <h5>
+                                {{product.discountedPrice|currency:'INR'}}
+                                <span class="mrp">
+                                    <del>{{product.unitPrice|currency:'INR'}}</del>
+                                </span>
+                            </h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    </div>
+    <br><br>
+</div>
