@@ -1,1 +1,33 @@
-<p>product-detail works!</p>
+<br>
+<div class="container">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="{{ product.productUrl }}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>{{ product.productName }}, 1 {{ product.unitType }}</h2>
+            
+               
+                <br>
+            <h6>
+                <span class="mrp">
+                    MRP: <del>{{ product.unitPrice | currency: 'INR' }}</del>
+                </span>
+            </h6>
+                <h3>
+                  Price: {{ product.discountedPrice | currency : 'INR' }}
+                 
+                </h3>
+                <h6><div class="saving">
+                    You Save: <b>{{product.discountedPrice*100/product.unitPrice}}% </b>
+                </div>
+                </h6>
+                <br>
+                <button class="btn" >Add To Cart</button>
+                    <br><br>
+                <p><h6>Description: </h6> <p>{{ product.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
