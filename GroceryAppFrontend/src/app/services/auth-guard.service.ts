@@ -15,9 +15,25 @@ export class AuthGuardService {
   }
 
   login(data:any):Observable<any>{
-     console.log("Reached fun");
-     console.log(data);
+    
+     
     return this.http.post<any>("http://localhost:5254/api/User/login",{Email:data.Email,Password:data.Password});
   }
 
+
+  checkToken():boolean{
+    if(localStorage.getItem('token'))
+    return true;
+    else
+    return false;
+
+  }
+
+ 
+
+  logout(){
+
+    localStorage.clear();
+
+  }
 }

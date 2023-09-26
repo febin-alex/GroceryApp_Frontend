@@ -6,7 +6,7 @@
  
 }
 .wrapper{
-    height: 440px;
+   min-height: 440px;
    
     padding: 20px;
 }

@@ -22,7 +22,7 @@
         <td></td>
         <td></td>
         <td><h3>Total: {{getTotalPrice() | currency : 'INR' }}</h3></td>
-        <td> <button class="btn btn-success"  >Buy Now</button></td>
+        <td> <button class="btn btn-success" (click)="clearCart()"  >Buy Now</button></td>
     </tr>
     </tbody>
     </table>

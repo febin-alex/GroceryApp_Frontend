@@ -9,6 +9,9 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { authGuard } from './guard/auth.guard';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { BuyPageComponent } from './pages/buy-page/buy-page.component';
 
 
 const routes: Routes = [
@@ -16,12 +19,14 @@ const routes: Routes = [
   {path:'home',component:HomePageComponent},
   {path:'category/:catId',component:ProductPageComponent},
   {path:'category/:catId/:subCatId',component:ProductPageComponent},
-  {path:'products/:productId',component:ProductDetailPageComponent},
+  {path:'products/:productId',component:ProductDetailPageComponent,canActivate:[authGuard]},
+  {path:'search/:productName',component:SearchPageComponent},
   {path:'about',component:AboutPageComponent},
   {path:'contact',component:ContactPageComponent},
   {path:'login',component:LoginPageComponent},
   {path:'register',component:RegisterPageComponent},
-  {path:'cart',component:CartPageComponent},
+  {path:'cart',component:CartPageComponent,canActivate:[authGuard]},
+  {path:'buy',component:BuyPageComponent},
   {path:'**',component:ErrorPageComponent}
 
 ];

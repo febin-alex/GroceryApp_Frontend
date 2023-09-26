@@ -29,4 +29,9 @@ export class DataService {
   getSubCategoryByCatId(catId:any):Observable<any>{
     return this.http.get<any>('http://localhost:5254/api/Subcategory/'+catId)
   }
+  getProductsBySearch(name:string):Observable<any>{
+    console.log(name);
+    console.log("aii");
+    return this.http.get<any>('http://localhost:5254/api/Product/search?name='+name);
+  }
 }
