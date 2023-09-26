@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/users.model';
 import { AuthGuardService } from 'src/app/services/auth-guard.service';
 
@@ -14,14 +15,17 @@ export class RegisterComponent {
   alertClass='';
 
 
-  constructor(private authService:AuthGuardService){}
+  constructor(private authService:AuthGuardService,private router : Router){}
   onSubmitHandle(){
     console.log(this.userModel)
     //this.CalculateAge();
    this.authService.register(this.userModel).subscribe((res:any)=>{
-    console.log(res);
+    
    this.alertClass='alert alert-success';
    this.textMess="Registered Successfully";
+   this.router.navigateByUrl("/login");
+   
+
    },(error)=>{
      console.log(error);
      this.alertClass='alert alert-danger';

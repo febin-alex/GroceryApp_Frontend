@@ -13,6 +13,7 @@ export class ProductComponent {
   products:IProduct[]=[];
   catId:any;
   subCatId:any;
+  productName:any;
   allProducts:IProduct[]=[];
   allCategoryProducts:IProduct[]=[];
 counter:any;
@@ -20,6 +21,7 @@ counter:any;
 this.counter=0;
   this.catId = activatedRoute.snapshot.paramMap.get('catId');
   this.subCatId = activatedRoute.snapshot.paramMap.get('subCatId');
+
 
 
   this.dataService.getAllProducts().subscribe((response:any) =>{
@@ -40,6 +42,9 @@ this.counter=0;
       this.allCategoryProducts=response;
       console.log()
     })
+
+
+  
   }
 
-}
+  }

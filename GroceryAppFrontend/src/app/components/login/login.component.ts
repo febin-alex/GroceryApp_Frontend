@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import{FormBuilder,FormControl,Validators,FormGroup,ReactiveFormsModule} from '@angular/forms'
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/users.model';
 import { AuthGuardService } from 'src/app/services/auth-guard.service';
 @Component({
@@ -12,8 +13,8 @@ export class LoginComponent {
   alertClass='';
   userModel=new User();
 
-   constructor(private fb: FormBuilder,public authSer:AuthGuardService){
-    // ,public router:Router){
+   constructor(private fb: FormBuilder,public authSer:AuthGuardService,public router:Router){
+ 
     }
 
    loginForm=this.fb.group({
@@ -35,12 +36,12 @@ export class LoginComponent {
   this.authSer.login(this.userModel).subscribe(
     (res: any) => {
       if(res.status=="success"){
-      console.log(res.message);
+     
       this.textMess = res.message;
       this.alertClass = "alert alert-success";
-      // localStorage.setItem('token', res.token);
+      localStorage.setItem('token', res.user.id);
       localStorage.setItem('user', JSON.stringify(res.user));
-          // this.router.navigateByUrl('/');
+         this.router.navigateByUrl('/home');
       }else{
         this.textMess=res.message;
         this.alertClass="alert alert-danger";

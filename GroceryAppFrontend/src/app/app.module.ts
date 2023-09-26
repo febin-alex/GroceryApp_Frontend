@@ -28,6 +28,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { BuyPageComponent } from './pages/buy-page/buy-page.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { ContentComponent } from './components/content/content.component';
     ErrorPageComponent,
     CartPageComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
+    SearchPageComponent,
+    BuyPageComponent
   ],
   imports: [
     BrowserModule,

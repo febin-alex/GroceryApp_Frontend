@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +12,7 @@ export class CartComponent implements OnInit{
 
  
 
-  constructor() { }
+  constructor(private router:Router) { }
 
 
   getTotalPrice(): number {
@@ -57,6 +58,8 @@ export class CartComponent implements OnInit{
     return cartItems ? JSON.parse(cartItems) : []; 
   } 
     clearCart() { 
-      localStorage.removeItem(this.cartKey); }
+      
+      localStorage.removeItem(this.cartKey); 
+    this.router.navigateByUrl("buy")}
 
 }
